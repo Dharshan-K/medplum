@@ -4,7 +4,7 @@ import { deepClone, normalizeErrorString } from '@medplum/core';
 import { UserConfiguration } from '@medplum/fhirtypes';
 import React from 'react';
 import { Form } from '../Form/Form';
-import { useMedplum } from '../MedplumProvider/MedplumProvider';
+import { useMedplum } from '../MedplumProvider/MedplumProvider.context';
 
 interface BookmarkDialogProps {
   pathname: string;
@@ -49,7 +49,7 @@ export function BookmarkDialog(props: BookmarkDialogProps): JSX.Element | null {
       <Form onSubmit={submitHandler}>
         <Stack>
           <SelectMenu config={config}></SelectMenu>
-          <TextInput label="Bookmark Name" type="text" name="bookmarkname" placeholder="bookmark name" withAsterisk />
+          <TextInput label="Bookmark Name" type="text" name="bookmarkname" placeholder="Bookmark Name" withAsterisk />
           <Group position="right">
             <Button mt="sm" type="submit">
               OK

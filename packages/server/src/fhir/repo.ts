@@ -1021,6 +1021,7 @@ export class Repository extends BaseRepository implements FhirRepository {
     if (expressions.length > 0) {
       builder.predicate.expressions.push(new Disjunction(expressions));
     }
+    
   }
 
   /**

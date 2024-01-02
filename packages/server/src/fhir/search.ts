@@ -509,14 +509,7 @@ export function buildSearchExpression(selectQuery: SelectQuery, searchRequest: S
   return new Conjunction(expressions);
 }
 
-/**
- * Builds a single search filter as "WHERE" clause to the query builder.
- * @param selectQuery - The select query builder.
- * @param resourceType - The type of resources requested.
- * @param table - The resource table.
- * @param filter - The search filter.
- * @returns The search query where expression
- */
+
 function buildSearchFilterExpression(
   selectQuery: SelectQuery,
   resourceType: ResourceType,
